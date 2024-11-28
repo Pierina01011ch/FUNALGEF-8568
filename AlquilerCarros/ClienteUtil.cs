@@ -9,7 +9,7 @@ namespace AlquilerCarros
     public class ClienteUtil
     {
         private static List<Cliente> clientes = new List<Cliente>();
-        public static void CrearCliente()
+        public static void CrearCliente(int Dni, string Nombre, double PagoMaximo)
         {
             Cliente nuevoCliente = new Cliente(DNI, Nombre, PagoMaximo);
             clientes.Add(nuevoCliente);
@@ -29,7 +29,7 @@ namespace AlquilerCarros
                 Console.WriteLine($"DNI: {cliente.Dni}, Nombre: {cliente.Nombre}, PagoMaximo: {cliente.PagoMaximo}");
             }
         }
-        public static void EliminarCliente()
+        public static void EliminarCliente(int Dni)
         {
             bool clienteEliminado = false;
 
